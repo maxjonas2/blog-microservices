@@ -1,0 +1,17 @@
+# Kubernets config file for posts service
+apiVersion: v1
+kind: Pod
+metadata:
+  name: posts
+spec: 
+  containers: 
+    - name: posts
+      image: jonas/posts:0:0:1 
+      # Set up resource limits
+      resources:
+        limits:
+          cpu: 100m
+          memory: 128Mi
+        requests:
+          cpu: 100m
+          memory: 128Mi
