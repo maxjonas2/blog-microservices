@@ -6,7 +6,8 @@ metadata:
 spec: 
   containers: 
     - name: posts
-      image: jonas/posts:0:0:1 
+      image: jonas/posts:0.0.1 
+      imagePullPolicy: Never
       # Set up resource limits
       resources:
         limits:
