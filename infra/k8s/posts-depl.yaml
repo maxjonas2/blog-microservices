@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
   name: posts-depl
-specs: 
+spec: 
   replicas: 1
   selector:
     matchLabels: 
@@ -15,7 +15,6 @@ specs:
       containers:
         - name: posts
           image: jonas/posts:0.0.1
-          imagePullPolicy: Never
           resources:
             limits:
               cpu: 100m
